@@ -1,0 +1,10 @@
+//= require jquery
+//= require jquery_ujs
+//= require angular/angular.min
+//= require angular-rails-templates
+//= require angular-route/angular-route.min
+//= require bootstrap/dist/js/bootstrap
+//= require angular-resource/angular-resource
+//= require app
+//= require_tree ./factories
+//= require_tree ./controllers

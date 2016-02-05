@@ -1,0 +1,46 @@
+<div class='row'>
+  <div class='container text-right'>
+    <span>Welcome {{auth.profile.nickname}}</span>
+    <button class='btn btn-danger' ng-click="logout()" >Log out</button>
+  </div>
+</div>
+
+<div class='container content' ng-controller='interestController'>
+  <h2>Create Interest</h2>
+  <form class="form-horizontal new_interest" data-remote="true" id="new_interest" name='forms.new_interest_form'>
+    <input type='hidden' name='user_id' value='auth.profile.clientID' ng-model='newInterest.user_id'>
+    <div class="form-group">
+      <label class="col-sm-3">Interest title</label>
+      <div class="col-sm-9">
+        <input type="text" placeholder="Enter Interest Title" class="form-control" ng-model='newInterest.title' name='name' required>
+        <div ng-show="forms.new_interest_form.$submitted || forms.new_interest_form.title.$touched" class='form-error'>
+          <div ng-show="forms.new_interest_form.title.$error.required">Please enter the interest name.</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3">Why does it interest you?</label>
+      <div class="col-sm-9">
+        <input type="text" placeholder="Why does it interest you?" class="form-control" ng-model='newInterest.reason' name='name' required>
+        <div ng-show="forms.new_interest_form.$submitted || forms.new_interest_form.reason.$touched" class='form-error'>
+          <div ng-show="forms.new_interest_form.reason.$error.required">Please enter the reason.</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-6">
+        <button type="button" class="fa fa-arrow-circle-o-right btn btn-primary form-control" ng-click="createInterest(newInterest, forms.new_interest_form)" ng-disabled="forms.new_interest_form.$invalid || forms.new_interest_form.$submitted">
+          Add New Interest
+        </button>
+      </div>
+    </div>
+  </form>
+  <h2>My Interests</h2>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat='interest in interests'>
+      {{interest.title}}
+    </li>
+  </ul>
+</div>

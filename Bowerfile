@@ -1,0 +1,8 @@
+asset 'bootstrap'
+asset 'angular'
+asset 'angular-route'
+asset 'angular-resource'
+asset 'angular-cookies'
+asset 'angular-storage'
+asset 'angular-jwt'
+asset 'auth0-angular'

@@ -1,0 +1,13 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "bootstrap": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "angular-cookies": "latest",
+    "angular-storage": "latest",
+    "angular-jwt": "latest",
+    "auth0-angular": "latest"
+  }
+}
