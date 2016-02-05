@@ -8,6 +8,9 @@ app.config(['$routeProvider', '$httpProvider', 'authProvider', 'jwtInterceptorPr
   $routeProvider.when('/login', {
     templateUrl: '/templates/login.tpl.html',
     controller: 'LoginCtrl'
+  }).when('/', {
+    templateUrl: '/templates/login.tpl.html',
+    controller: 'LoginCtrl'
   }).when('/user-info', {
     templateUrl: '/templates/userInfo.tpl.html',
     controller: 'UserInfoCtrl',
